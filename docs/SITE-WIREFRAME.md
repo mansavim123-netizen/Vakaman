@@ -66,7 +66,7 @@ Status: structure is implemented as a responsive first wireframe. Client-specifi
 - Press contact, approved media kit, announcements, awards/publications only when sourced.
 - No invented press coverage or awards.
 
-## Route 9 — Journal
+## Route 9 — Blog / Journal
 
 - Editorial landing and later article index/template.
 - Only editor-approved stories, sourced claims and cleared image rights.
