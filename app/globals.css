@@ -74,15 +74,15 @@ p { color: var(--ivory-soft); }
 .scroll-cue { display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--ivory-muted); font-size: 8px; letter-spacing: .2em; }
 .scroll-cue__line { display: inline-block; width: 28px; height: 1px; background: var(--gold-dim); }
 
-.architecture-field { --pointer-x: 50%; --pointer-y: 48%; position: absolute; inset: 0 0 32px; overflow: hidden; perspective: 1200px; isolation: isolate; }
+.architecture-field { --pointer-x: 50%; --pointer-y: 48%; --shift-x: 0px; --shift-y: 0px; --shift-x-reverse: 0px; --shift-y-reverse: 0px; position: absolute; inset: 0 0 32px; overflow: hidden; perspective: 1200px; isolation: isolate; }
 .architecture-field__atmosphere { position: absolute; inset: 6% 4% 5%; background: radial-gradient(ellipse at var(--pointer-x) var(--pointer-y), rgba(201,168,76,.105), transparent 37%), radial-gradient(ellipse at 53% 42%, rgba(220,211,191,.08), transparent 42%); transition: background-position .8s var(--ease-weight); }
 .architecture-field__grid { position: absolute; inset: 12% -12% 8% 2%; transform: perspective(700px) rotateX(62deg) rotateZ(-17deg) translateY(12%); transform-origin: center; background-image: linear-gradient(rgba(240,235,225,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(240,235,225,.12) 1px, transparent 1px); background-size: 36px 36px; mask-image: linear-gradient(to bottom, transparent, black 20%, black 75%, transparent); opacity: .26; }
 .architecture-field__axis { position: absolute; background: rgba(201,168,76,.34); }
 .architecture-field__axis--vertical { top: 7%; bottom: 8%; left: 54%; width: 1px; opacity: .7; }
 .architecture-field__axis--horizontal { left: 8%; right: 3%; top: 60%; height: 1px; opacity: .45; }
 .architecture-field__monolith { position: absolute; transform-style: preserve-3d; transition: transform .8s var(--ease-weight); }
-.architecture-field__monolith--rear { top: 14%; left: 24%; width: 31%; height: 54%; border: 1px solid rgba(240,235,225,.25); transform: translate3d(calc((var(--pointer-x) - 50%) * -.08), calc((var(--pointer-y) - 50%) * -.08), -50px) rotateY(-24deg) rotateX(4deg); background: linear-gradient(120deg, rgba(240,235,225,.055), rgba(14,13,11,.04)); }
-.architecture-field__monolith--main { top: 18%; left: 34%; width: 39%; height: 57%; transform: translate3d(calc((var(--pointer-x) - 50%) * .12), calc((var(--pointer-y) - 50%) * .1), 0) rotateY(-18deg) rotateX(2deg); }
+.architecture-field__monolith--rear { top: 14%; left: 24%; width: 31%; height: 54%; border: 1px solid rgba(240,235,225,.25); transform: translate3d(var(--shift-x-reverse), var(--shift-y-reverse), -50px) rotateY(-24deg) rotateX(4deg); background: linear-gradient(120deg, rgba(240,235,225,.055), rgba(14,13,11,.04)); }
+.architecture-field__monolith--main { top: 18%; left: 34%; width: 39%; height: 57%; transform: translate3d(var(--shift-x), var(--shift-y), 0) rotateY(-18deg) rotateX(2deg); }
 .architecture-field__face { position: absolute; backface-visibility: hidden; }
 .architecture-field__face--front { inset: 0 17% 0 0; border: 1px solid rgba(240,235,225,.35); background: linear-gradient(145deg, #383530 0%, #191815 48%, #0d0c0b 100%); box-shadow: inset 15px 0 35px rgba(255,255,255,.025), 22px 25px 60px rgba(0,0,0,.7); }
 .architecture-field__face--side { top: 0; right: 0; width: 17%; height: 100%; transform: skewY(-36deg); transform-origin: left top; background: linear-gradient(90deg, #171614, #070708); border-right: 1px solid rgba(240,235,225,.2); }
