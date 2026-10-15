@@ -13,7 +13,7 @@ export default function SiteFooter() {
           </div>
           <div className="footer-links">
             <div><span className="eyebrow">Explore</span><Link href="/projects">Portfolio</Link><Link href="/legacy">Legacy</Link><Link href="/virtual-tours">Virtual tours</Link></div>
-            <div><span className="eyebrow">Connect</span><Link href="/about">Our perspective</Link><Link href="/press">Press</Link><Link href="/contact">Contact</Link></div>
+            <div><span className="eyebrow">Connect</span><Link href="/about">Our perspective</Link><Link href="/press">Press</Link><Link href="/blog">Journal</Link><Link href="/contact">Contact</Link></div>
           </div>
         </div>
         <div className="site-footer__bottom">
