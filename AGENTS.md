@@ -1,76 +1,64 @@
 # VAKAMAN — PROJECT CONTROL
 
 ## Mission
-Build a luxury real-estate experience that feels established, architectural, physical and unmistakably Vakaman while preserving conversion, accessibility and performance.
+Build a distinctive, commercially effective luxury real-estate experience for Vakaman Developers. The creative thesis is **Architecture With Mass**: the site should feel architectural, physical, materially considered and unmistakably Vakaman.
 
 ## Source of truth
-- VAKAMAN-DESIGN-BIBLE.md — creative system
-- VAKAMAN-AI-ORCHESTRATION.md — agent responsibilities and handoffs
-- package.json / installed framework docs — technical truth
-- client-supplied project data/assets — factual truth
+- VAKAMAN-DESIGN-BIBLE.md — brand and creative system
+- VAKAMAN-AI-ORCHESTRATION.md — studio responsibilities and handoffs
+- docs/SITE-WIREFRAME.md — route and responsive information architecture
+- package.json and installed framework documentation — technical truth
+- client-approved data and assets — factual truth
 
 ## Core rule
-The AI may generate implementation. It may not invent client facts.
+AI may generate implementation. It may not invent client facts, project details, awards, completion/sold-out status, specifications, testimonials, prices, availability, director biographies, group history or official contact details.
 
-## Agent hierarchy
-Main:
-- vakaman-director
+## Antigravity agent hierarchy
+Director: vakaman-director
+- Creative Lead: vakaman-creative-lead
+  - vakaman-creative-director
+  - vakaman-ux-strategist
+  - vakaman-art-director
+  - vakaman-copy-strategist
+  - vakaman-reference-scout
+- Build Lead: vakaman-build-lead
+  - vakaman-frontend-architect
+  - vakaman-motion-engineer
+  - vakaman-webgl-engineer
+  - vakaman-3d-pipeline
+  - vakaman-conversion-engineer
+- Quality Lead: vakaman-quality-lead
+  - vakaman-qa-engineer
+  - vakaman-performance-engineer
+  - vakaman-accessibility-engineer
+  - vakaman-seo-engineer
+  - vakaman-security-engineer
 
-Team leads:
-- vakaman-creative-lead
-- vakaman-build-lead
-- vakaman-quality-lead
-
-Specialists:
-- vakaman-creative-director
-- vakaman-ux-strategist
-- vakaman-art-director
-- vakaman-copy-strategist
-- vakaman-reference-scout
-- vakaman-frontend-architect
-- vakaman-motion-engineer
-- vakaman-webgl-engineer
-- vakaman-3d-pipeline
-- vakaman-conversion-engineer
-- vakaman-qa-engineer
-- vakaman-performance-engineer
-- vakaman-accessibility-engineer
-- vakaman-seo-engineer
-- vakaman-security-engineer
+Workspace agent definitions live under .agents/agents/. Persistent project constraints live in AGENTS.md and .agents/rules/. The director should use available Antigravity subagent tools to delegate bounded, independent reviews; do not assume every role must be invoked for every change.
 
 ## Ownership
-Creative team proposes and protects the visual language.
-Build team implements it.
-Quality team attempts to break it.
-The director resolves conflicts.
+Creative roles propose and protect the visual language. Build roles implement their owned systems. Quality roles challenge and verify. The Director resolves cross-domain conflicts. Never allow two agents to write overlapping files concurrently; parallelize research/review, serialize shared-code changes.
 
 ## Workflow
-DISCOVER
--> DEFINE
--> PROTOTYPE
--> IMPLEMENT
--> REVIEW
--> OPTIMIZE
--> SHIP
+DISCOVER -> DEFINE -> PROTOTYPE -> IMPLEMENT -> REVIEW -> OPTIMIZE -> SHIP
+
+For major features: intent -> interaction specification -> physical model -> DOM/technical architecture -> implementation -> visual review -> quality review.
 
 ## Change discipline
-Before editing:
-- inspect relevant files
-- state intended files
-- identify risk
+Before editing, inspect the repository, name intended files, and identify risks. After editing, report exact files changed, commands actually run, outcomes, visual checks and unresolved risks. Never claim verification without evidence.
 
-After editing:
-- run the narrowest meaningful checks
-- report files changed
-- report verification
-- report unresolved risks
+## Creative non-negotiables
+- Preserve Hook -> World -> Trust -> Desire -> Story -> Proof -> Escape -> Resolution.
+- The physical grammar is consistent: slow input = mass; fast input = force; sudden input = impact; sustained input = tension; release = recovery.
+- Stillness is a design tool. Restraint is not an excuse for emptiness; experimentation is not an excuse for noise.
+- DOM content remains authoritative; visual and GPU systems are progressive enhancement.
+- Heavy 3D belongs in the dedicated virtual-tour experience unless a small homepage effect has a clear narrative benefit.
 
-## Non-negotiables
-- Mobile-first.
-- Reduced-motion support.
-- Keyboard accessibility.
-- No invented property claims.
-- No giant dependencies for tiny effects.
-- No heavy 3D on initial load without a fallback.
-- No animation that blocks comprehension.
-- No "luxury" cliches that dilute Vakaman's identity.
+## Engineering non-negotiables
+- Mobile-first, keyboard accessible, visible focus, readable contrast and reduced-motion support.
+- Native scrolling remains available. No hover-only or custom-cursor-dependent core interactions.
+- No heavyweight animation blocking initial paint or LCP.
+- GPU/rendering systems need capability checks, cleanup, fallback and motion-reduction behavior.
+- No secrets in client code. A form is not connected unless an actual endpoint has been implemented and tested.
+- Avoid unnecessary dependencies and bloated abstractions.
+- Keep main deployable. Day 1 work belongs on day-1/antigravity-foundation until verified and reviewed.
